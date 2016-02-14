@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/hangman_practice.css">
+</head>
+<body>	
+	<h1>Hangman</h1>
+
+	<button id="start-btn">START</button>
+
+	<!-- Hangman Container -->
+	<div id="hangman-container">
+		<div class="input-field">
+			<input id="input-letter" name="input-letter" type="text" class="ltr-inp">
+			<!-- Button to begin game -->
+			<button id="guess-letter" class="btn">Guess a Letter</button>
+		</div>
+
+		<ul id="word">WORD: </ul>
+
+		<div id="guessed-words">LETTERS GUESSED: </div>
+
+		<img class="img-hangman" src="https://i.ytimg.com/vi/Cz_XFY6CZ1c/maxresdefault.jpg">
+
+	</div>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/hangman_practice.js"></script>
+
+
+</body>
+</html>

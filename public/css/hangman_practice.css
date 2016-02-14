@@ -1,0 +1,50 @@
+#hangman-container {
+	/*border: 1px solid black;*/
+	position: relative;
+	left: 10%;
+	width: 600px;
+	height: 900px;
+	text-align: center;
+	display: none;
+}
+
+.input-field {
+	position: relative;
+	top: 50px;
+}
+
+.ltr-inp {
+	width: 50px;
+	height: 30px;
+	font-size: 20px;
+	padding: 5px;
+}
+
+.btn {
+	padding: 10px;
+	font-size: 14px;
+}
+
+p {
+	position: relative;
+	top: 130px;
+	right: 100px;
+}
+
+#guessed-words {
+	position: relative;
+	top: 150px;
+}
+
+.img-hangman {
+	width: 400px;
+	position: relative;
+	top: 200px;
+	left: 100px;
+	display: none;
+}
+#word {
+	position: relative;
+	top: 100px;
+	list-style: none;
+}
