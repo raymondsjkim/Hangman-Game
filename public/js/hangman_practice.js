@@ -5,7 +5,7 @@ var Hangman = {
     currentWord:      '', // Current word for the game
     correctGuesses:   [], // Correct letters the user has guesses
     incorrectGuesses: [], // Wrong letters the user has guessed
-    maxGuesses:        7, // Maximum number of wrong guesses the user is allowed
+    maxGuesses:        5, // Maximum number of wrong guesses the user is allowed
 
     init: function() {
         // console.log("init");
@@ -56,25 +56,23 @@ var Hangman = {
         // $("#input-letter").val('');
 
         if(this.hasLetterBeenGuessed(letter)) {
+            alert("YOU HAVE ALREADY GUESSED THAT LETTER")
             $("#guessed-words").append("<span>" + letter + " " +  "</span>");
         }
 
         // pass letter to its function
         if(this.isLetterInWord(letter)) {
             this.addCorrectGuess(letter);
-            this.findLetterInWord(letter);  
-            // console.log("true");
-            
-            alert("CORRECT! " + '"' +  letter + '"' + " is in the word");
-
+            this.findLetterInWord(letter); 
+            alert("CORRECT"); 
         } else {
             this.addIncorrectGuess(letter);
-            // console.log("false"); 
-            alert("NOPE! " + '"' +  letter + '"' + " is not in the word");
+            alert("WRONG");
         }
 
 
         $("#input-letter").val('');
+
 
         this.gameEnd();
         this.isGameWon();
@@ -126,8 +124,6 @@ var Hangman = {
 
             if(lchar === letter) {
                 result.push(indexOfWord);
-                // console.log(indexOfWord);
-                $("#word").append("<span>"+lchar+"</span>");
             }
         });
         console.log(result);
@@ -138,26 +134,17 @@ var Hangman = {
         // console.log("addCorrectGuess");
         
         this.correctGuesses.push(letter);
-
-
-        // console.log(this.correctGuesses.push(letter));
     },
     addIncorrectGuess: function(letter) {
-        // console.log("addIncorrectGuess");
-        
+        // console.log("addIncorrectGuess");   
         this.incorrectGuesses.push(letter);
     },
 
     isGameWon: function() {
         
         if(this.correctGuesses.length === this.currentWord.length) {
-            alert("winnnnnnnner");
+            alert("YOU WIN! The word is: " + this.currentWord);
         }
-
-        // for (var i = 0; i < this.currentWord.length; i++) {
-        //     console.log(this.currentWord[i]);
-        // }
-       
     },
     
     gameEnd: function() {

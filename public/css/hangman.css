@@ -30,6 +30,17 @@ p {
 	top: 130px;
 	right: 100px;
 }
+#dashed-letter-line {
+	position: relative;
+	top: 100px;
+}
+span {
+	margin-left: 25px;
+	border-bottom: 2px solid black;
+	/*color: #FFF;*/
+	font-size: 25px;
+	padding-left: 10px;
+}
 
 
 
